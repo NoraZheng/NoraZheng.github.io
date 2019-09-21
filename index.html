@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <script src="https://kit.fontawesome.com/01c2321f5b.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="./styles/style.css">
    <title>Nora Zheng</title>
 </head>
@@ -12,14 +13,26 @@
 <body>
 
 
-   <header></header>
-   <main>
-      <h1 class="hello">Hello! I'm Nora Zheng</h1>
-      <p class="about-me">Totonto-based front‑end web developer with a passion for crafting beautiful & user‑friendly
+
+   <main class='landing-page'>
+      <button class="menu-button">
+         <span class="visually-hidden">Click to toggle navigation menu</span>
+      </button>
+      <nav class="menu">
+         <ul class="menu-links">
+            <li class="menu-link-portfolio">portfolio</li>
+            <li class="menu-link-toolbox">toolbox</li>
+            <li class="menu-link">about me</li>
+            <li class="menu-link">contact me</li>
+         </ul>
+      </nav>
+      <h1 class="hello">Hi there! <br> I'm Nora Zheng.</h1>
+      <p class="hello-info">Totonto-based front‑end web developer with a passion for crafting beautiful and
+         user‑friendly
          apps that make the world slightly more enjoyable.</p>
+      <p class="view-my-work"><a href="./portfolio.html">View My Portfolio →</a></p>
 
    </main>
-   <footer></footer>
    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
    <script src="./scripts/jquery.smoothState.js"></script>
    <script src="./scripts/script.js"></script>
