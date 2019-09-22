@@ -1,14 +1,14 @@
 html {
-	font-size: 100%;
+  font-size: 100%;
 }
 
 body {
-	background-color: $white;
-	font-family: $m-font;
-	letter-spacing: 1px;
-	color: $black;
-	width: 100vw;
-	height: 100vh;
+  background-color: $white;
+  font-family: $m-font;
+  letter-spacing: 1px;
+  color: $black;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1,
@@ -16,79 +16,30 @@ h2,
 h3,
 h4,
 p {
-	margin: 0;
+  margin: 0;
 }
 ul {
-	list-style: none;
-	padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-	font-size: 5rem;
+  font-size: calc(32px + (80 - 32) * (100vw - 320px) / (1440 - 320));
 }
 
 a {
-	text-decoration: none;
-	color: $black;
+  text-decoration: none;
+  color: $black;
 }
 
 main {
-	display: grid;
-	grid-template-columns: repeat(12, calc(100% / 12));
-	grid-template-rows: repeat(10, 10vh);
-}
-
-// menu styles
-
-.menu {
-	grid-column: 1 / 5;
-	grid-row: 1 / 2;
-	display: grid;
-}
-// .men
-
-.menu-button {
-	border-radius: 50%;
-	margin: 1rem;
-	height: 60px;
-	width: 60px;
-	font-size: 1.5rem;
-	font-weight: 400;
-	background-color: $a-color;
-	border: none;
-	color: $white;
-	grid-column: 1 / 2;
-	grid-row: 1 / 2;
-}
-.menu-links {
-	display: grid;
-	grid-column: 1 / 6;
-	grid-row: 1 / 2;
-}
-.menu-link-toolbox {
-	grid-column-start: 3;
-}
-.menu-link-portfolio {
-	grid-column: 2 / 3;
-}
-// .menu-button:hover,
-// .menu-button:focus {
-// }
-
-// landing page
-.hello {
-	grid-column: 2 / 9;
-	grid-row: 4 / 5;
-}
-.hello-info {
-	grid-column: 2 / 7;
-	grid-row: 7 / 8;
-}
-
-.view-my-work {
-	grid-column: 2 / 4;
-	grid-row: 8 / 9;
-	a {
-		border-bottom: 1px $black solid;
-	}
+  max-width: 1440px;
+  max-height: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(16, calc(100vw / 16));
+  grid-template-rows: repeat(10, 10vh);
+  align-items: center;
+  position: relative;
 }

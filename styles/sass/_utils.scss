@@ -1,23 +1,25 @@
 // accent color
 $a-color: #f82749;
 // primary color
-$p-color: #f78797;
+$p-color: #f77487;
 // secondary color
-$s-color: #c1b6b4;
+$s-color: #f78797;
+// complimentary color
+$c-color: #c1b6b4;
 // white
 $white: #f5e7e5;
 // black
 $black: #191919;
 
 @font-face {
-	font-family: 'MADE Likes Slab';
-	src: url('../assets/made-likes-slab.otf'),
-		url('../assets/made-likes-slab.otf'); /* IE */
+  font-family: 'MADE Likes Slab';
+  src: url('../assets/made-likes-slab.otf'),
+    url('../assets/made-likes-slab.otf'); /* IE */
 }
 
 @font-face {
-	font-family: 'Raleway';
-	src: url('../assets/raleway-medium.ttf'), url('../assets/raleway-medium..ttf'); /* IE */
+  font-family: 'Raleway';
+  src: url('../assets/raleway-medium.ttf'), url('../assets/raleway-medium..ttf'); /* IE */
 }
 // header-font
 $h-font: 'MADE Likes Slab', serif;
