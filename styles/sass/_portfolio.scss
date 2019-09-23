@@ -1,0 +1,67 @@
+.portfolio-title {
+  position: fixed;
+  left: 10%;
+  top: 25%;
+  // the crane image
+  &::after {
+    position: relative;
+    left: -10%;
+    top: -60px;
+    content: '';
+    display: block;
+    width: 50vmax;
+    height: 50vmax;
+    max-width: 700px;
+    background: url('../assets/crane.svg') no-repeat;
+    background-size: contain;
+    transform: scaleX(-1);
+  }
+}
+.projects {
+  z-index: 5;
+  grid-column: 9 / -2;
+  grid-row-start: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+}
+.project {
+  flex: 1 1 100%;
+  min-width: 320px;
+  padding: 3vmax 3vmax 0;
+  margin: 0.5rem;
+  background: rgba(lighten($white, 5%), 0.6);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  &:hover {
+    figcaption {
+      opacity: 100;
+      transition: all 0.2s;
+    }
+  }
+
+  figure {
+    flex-basis: 100%;
+    position: relative;
+  }
+  figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(lighten($white, 5%), 0.95);
+  }
+}
+.thumbnail {
+  filter: contrast(90%) saturate(60%);
+}
+.repo,
+.live-link {
+  margin: 1.5vmax auto;
+  border-bottom: 1px solid $black;
+  flex: 1 1 25;
+}

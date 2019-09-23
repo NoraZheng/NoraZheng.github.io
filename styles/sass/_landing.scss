@@ -1,23 +1,22 @@
 .landing-page {
   background: url('../assets/lily.svg') no-repeat 140% 90%;
   background-size: 65%;
-  background-attachment: fixed;
 }
 
 // home page
 .hello {
   font-family: $h-font;
-  grid-column: 2 / 11;
-  grid-row: 5 / 6;
+  grid-area: 5 / 2 / 6 / 11;
 }
 .hello-info {
-  grid-column: 2 / 9;
-  grid-row: 7 / 8;
+  grid-area: 7 / 2 / 8 / 9;
 }
 
 .view-my-work {
   grid-column: 2 / 6;
   grid-row: 8 / 9;
+
+  grid-area: 8 / 2 / 9 / 6;
   a {
     border-bottom: 1px $black solid;
     &:focus,
