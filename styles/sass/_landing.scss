@@ -1,15 +1,8 @@
-.index-body {
-	background: url('../assets/lily.svg') no-repeat 140% 90%;
-	background-size: 65%;
-}
-
 // home page
 
 .landing-page {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	background: url('../assets/lily.svg') no-repeat 140% 90%;
+	background-size: 65%;
 }
 
 .greeting-box {

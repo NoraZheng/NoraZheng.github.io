@@ -1,8 +1,26 @@
 .about-page {
-	background: url('../assets/crane.svg') no-repeat right bottom;
+	background: url('../assets/crane.svg') no-repeat right;
 	background-size: 50%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .about-me {
-	grid-area: 1 / 2 / -2 / 10;
+	margin-left: 5%;
+	width: 50%;
+	p:last-child {
+		margin-top: 2rem;
+		a {
+			margin-right: 2rem;
+		}
+	}
+}
+.about-title {
+	margin: 0;
+}
+.photo {
+	background: $s-color;
+	border-radius: 50%;
 }
