@@ -1,120 +1,118 @@
 .menu-button {
-  border-radius: 50%;
-  height: 8vmin;
-  width: 8vmin;
-  max-width: 60px;
-  max-height: 60px;
-  min-width: 40px;
-  min-height: 40px;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  font-size: 1.5rem;
-  font-weight: 400;
-  background-color: $black;
-  border: none;
-  color: $white;
-  z-index: 20;
-  transition: all 0.5s;
-  &:hover,
-  &:focus {
-    background: $a-color;
-    border-radius: 30%;
-  }
-  &::before {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 1px;
-    background: $white;
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    transition: all 0.5s;
-  }
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    background: $white;
-    width: 35%;
-    height: 1px;
-    background: $white;
-    bottom: 40%;
-    left: 25%;
-    transition: all 0.5s;
-  }
+	border-radius: 50%;
+	height: 8vmin;
+	width: 8vmin;
+	max-width: 60px;
+	max-height: 60px;
+	min-width: 40px;
+	min-height: 40px;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	font-size: 1.5rem;
+	font-weight: 400;
+	background-color: $black;
+	border: none;
+	color: $white;
+	z-index: 20;
+	transition: all 0.5s;
+	&:hover,
+	&:focus {
+		background: $a-color;
+		border-radius: 30%;
+	}
+	&::before {
+		content: '';
+		display: block;
+		width: 50%;
+		height: 1px;
+		background: $white;
+		position: absolute;
+		top: 40%;
+		left: 25%;
+		transition: all 0.5s;
+	}
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		background: $white;
+		width: 35%;
+		height: 1px;
+		background: $white;
+		bottom: 40%;
+		left: 25%;
+		transition: all 0.5s;
+	}
 }
 
 .menu-button-close {
-  transition: all 0.3s;
-  background: $white;
-  &:hover,
-  &:focus {
-    background: $a-color;
-    &::before {
-      background-color: $white;
-    }
-    &::after {
-      background-color: $white;
-    }
-  }
-  &::before {
-    width: 50%;
-    top: 50%;
-    transform: rotate(45deg);
-    background-color: $a-color;
-    transition: all 0.5s;
-  }
-  &::after {
-    width: 50%;
-    transform: rotate(-45deg);
-    bottom: 50%;
-    background-color: $a-color;
-    transition: all 0.5s;
-  }
+	transition: all 0.3s;
+	background: $white;
+	&:hover,
+	&:focus {
+		background: $a-color;
+		&::before {
+			background-color: $white;
+		}
+		&::after {
+			background-color: $white;
+		}
+	}
+	&::before {
+		width: 50%;
+		top: 50%;
+		transform: rotate(45deg);
+		background-color: $a-color;
+		transition: all 0.5s;
+	}
+	&::after {
+		width: 50%;
+		transform: rotate(-45deg);
+		bottom: 50%;
+		background-color: $a-color;
+		transition: all 0.5s;
+	}
 }
 
-// menu styles
-
 .menu {
-  opacity: 0;
-  transition: all 0.3s;
-  z-index: -30;
-  position: fixed;
+	opacity: 0;
+	transition: all 0.3s;
+	z-index: -30;
+	position: fixed;
 }
 
 .show-menu {
-  background-color: $black;
-  opacity: 100;
-  transition: all 0.3s;
-  z-index: 10;
+	background-color: $black;
+	opacity: 100;
+	transition: all 0.3s;
+	z-index: 15;
 }
 
 .menu-links {
-  display: flex;
-  flex-direction: column;
-  font-family: $h-font;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  //for list style disc to stay small
-  font-size: 30px;
+	display: flex;
+	flex-direction: column;
+	font-family: $h-font;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	//for list style disc to stay small
+	font-size: 30px;
 }
 
 .menu-link {
-  color: $white;
+	color: $white;
 }
 .menu-link-name {
-  font-size: calc(24px + (72 - 24) * (100vw - 320px) / (1440 - 320));
+	font-size: calc(24px + (72 - 24) * (100vw - 320px) / (1440 - 320));
 }
 .menu-item:hover,
 .menu-item:focus-within,
 .menu-link:focus {
-  list-style: disc;
-  color: $a-color;
-  a {
-    color: $a-color;
-  }
+	list-style: disc;
+	color: $a-color;
+	a {
+		color: $a-color;
+	}
 }

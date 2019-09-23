@@ -231,6 +231,111 @@ a:focus {
   color: #f82749;
 }
 
+.smooth-state-container main {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
 main {
   max-width: 1440px;
   max-height: 900px;
@@ -395,7 +500,7 @@ main {
   opacity: 100;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  z-index: 10;
+  z-index: 15;
 }
 
 .menu-links {
@@ -440,6 +545,8 @@ main {
 }
 
 .landing-page {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
   background: url("../assets/lily.svg") no-repeat 140% 90%;
   background-size: 65%;
 }
@@ -472,6 +579,8 @@ main {
 }
 
 .portfolio-page {
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
   padding-right: 5%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -583,6 +692,8 @@ figcaption {
 }
 
 .about-page {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
   background-size: 50%;
   height: 100vh;
   -webkit-box-orient: horizontal;
@@ -630,6 +741,8 @@ figcaption {
 }
 
 .contact-page {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
   background: url("../assets/boat.svg") no-repeat right;
   background-size: 50%;
   -webkit-box-align: start;
