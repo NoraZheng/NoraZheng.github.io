@@ -1,77 +1,76 @@
 .portfolio-page::before {
-  position: fixed;
-  content: '';
-  left: 0;
-  top: 35%;
-  display: block;
-  width: 50vmax;
-  height: 50vmax;
+	position: fixed;
+	content: '';
+	left: 0;
+	top: 35%;
+	display: block;
+	width: 50vmax;
+	height: 50vmax;
 
-  background: url('../assets/cloud.svg') no-repeat;
-  background-size: cover;
-  transform: scaleX(-1);
+	background: url('../assets/cloud.svg') no-repeat;
+	background-size: cover;
+	transform: scaleX(-1);
 }
 
 .portfolio-title {
-  position: fixed;
-  top: 10vh;
-  left: 10%;
+	position: fixed;
+	top: 10vh;
+	left: 10%;
 }
 .go-to-contact {
-  position: fixed;
-  left: 10%;
-  top: 35vh;
+	position: fixed;
+	left: 10%;
+	top: 35vh;
 }
 .projects {
-  z-index: 5;
-  grid-column: 9 / -2;
-  grid-row-start: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-self: flex-start;
+	z-index: 5;
+	grid-column: 9 / -2;
+	grid-row-start: 1;
+	display: flex;
+	flex-wrap: wrap;
+	align-self: flex-start;
 }
 .project {
-  flex: 1 1 100%;
-  min-width: 320px;
-  padding: 3vmax 3vmax 0;
-  margin: 0.5rem;
-  background: rgba(lighten($white, 5%), 0.7);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-between;
+	flex: 1 1 100%;
+	min-width: 320px;
+	padding: 3vmax 3vmax 0;
+	margin: 0.5rem auto;
+	background: rgba(lighten($white, 5%), 0.7);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-between;
+	&:hover {
+		figcaption {
+			opacity: 100;
+			transition: all 0.3s;
+		}
+	}
 
-  &:hover {
-    figcaption {
-      opacity: 100;
-      transition: all 0.3s;
-    }
-  }
-
-  figure {
-    flex-basis: 100%;
-    position: relative;
-  }
-  figcaption {
-    transition: all 0.3s;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    background-color: rgba(lighten($white, 5%), 0.95);
-    h2 {
-      text-align: center;
-    }
-  }
+	figure {
+		flex-basis: 100%;
+		position: relative;
+	}
+	figcaption {
+		transition: all 0.3s;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		background-color: rgba(lighten($white, 5%), 0.95);
+		h2 {
+			text-align: center;
+		}
+	}
 }
 .thumbnail {
-  filter: saturate(60%);
+	filter: saturate(60%);
 }
 .repo,
 .live-link {
-  margin: 1.5vmax auto;
-  border-bottom: 1px solid $black;
-  flex: 1 1 25;
+	margin: 1.5vmax auto;
+	border-bottom: 1px solid $black;
+	flex: 1 1 25;
 }

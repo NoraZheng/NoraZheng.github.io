@@ -191,8 +191,6 @@ body {
   font-family: "Raleway", sans-serif;
   letter-spacing: 1px;
   color: #191919;
-  width: 100vw;
-  height: 100vh;
   margin: 0 auto;
 }
 
@@ -233,15 +231,10 @@ main {
   max-width: 1440px;
   max-height: 900px;
   position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (calc(100vw / 16))[16];
-      grid-template-columns: repeat(16, calc(100vw / 16));
-  -ms-grid-rows: (10vh)[10];
-      grid-template-rows: repeat(10, 10vh);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.hide-main {
+  display: none;
 }
 
 .next-page,
@@ -431,36 +424,51 @@ main {
   color: #f82749;
 }
 
-.landing-page {
+.index-body {
   background: url("../assets/lily.svg") no-repeat 140% 90%;
   background-size: 65%;
 }
 
+.landing-page {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.greeting-box {
+  width: 60%;
+  height: 40%;
+  padding-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .hello {
+  margin: 0;
   font-family: "MADE Likes Slab", serif;
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 9;
-  grid-area: 5 / 2 / 6 / 11;
 }
 
 .hello-info {
-  -ms-grid-row: 7;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 7;
-  grid-area: 7 / 2 / 8 / 9;
-}
-
-.view-my-work {
-  -ms-grid-row: 8;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-area: 8 / 2 / 9 / 5;
-  -ms-grid-column-align: left;
-      justify-self: left;
+  width: 80%;
 }
 
 .portfolio-page::before {
@@ -509,7 +517,7 @@ main {
           flex: 1 1 100%;
   min-width: 320px;
   padding: 3vmax 3vmax 0;
-  margin: 0.5rem;
+  margin: 0.5rem auto;
   background: rgba(252, 248, 247, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -565,10 +573,15 @@ main {
           flex: 1 1 25;
 }
 
+.about-page {
+  background: url("../assets/crane.svg") no-repeat right bottom;
+  background-size: 50%;
+}
+
 .about-me {
   -ms-grid-column: 2;
   -ms-grid-column-span: 8;
-  grid-area: 2 / 2 / -2 / 10;
+  grid-area: 1 / 2 / -2 / 10;
 }
 
 .contact-page {

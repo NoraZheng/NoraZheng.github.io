@@ -1,18 +1,31 @@
-.landing-page {
-  background: url('../assets/lily.svg') no-repeat 140% 90%;
-  background-size: 65%;
+.index-body {
+	background: url('../assets/lily.svg') no-repeat 140% 90%;
+	background-size: 65%;
 }
 
 // home page
-.hello {
-  font-family: $h-font;
-  grid-area: 5 / 2 / 6 / 11;
-}
-.hello-info {
-  grid-area: 7 / 2 / 8 / 9;
+
+.landing-page {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.view-my-work {
-  grid-area: 8 / 2 / 9 / 5;
-  justify-self: left;
+.greeting-box {
+	width: 60%;
+	height: 40%;
+	padding-left: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.hello {
+	margin: 0;
+	font-family: $h-font;
+}
+
+.hello-info {
+	width: 80%;
 }
