@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/01c2321f5b.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Nora Zheng - Contact</title>
   </head>
@@ -42,6 +47,85 @@
           </li>
         </ul>
       </nav>
+      <section class="contact">
+        <h1 class="contact-title">Get in touch</h1>
+        <p class="thrilled">
+          Send me a message! I'll be thrilled to hear from you!
+        </p>
+        <form
+          method="POST"
+          action="http://www.focuspocus.io/magic/2e33c01f9fe7c96b39132061d4d5b991"
+          class="message-form"
+        >
+          <!-- <h2 class="form-title">Send me a message</h2> -->
+
+          <label for="name" class="visually-hidden">your name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Name"
+            required
+          />
+
+          <label for="email" class="visually-hidden" required>email</label>
+          <input id="email" name="email" type="email" placeholder="Email" />
+
+          <label for="message" class="visually-hidden">message</label>
+          <textarea
+            placeholder="Message"
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input
+            type="submit"
+            value="send message"
+            class="send-button next-page"
+          />
+        </form>
+
+        <section class="contact-info">
+          <h2 class="my-contact">
+            Stay connected!
+          </h2>
+          <ul class="contact-items">
+            <li class="contact-item">
+              <a href="mailto:zhengnuo@gmail.com">
+                <span class="sr-only">email address</span>
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <li class="contact-item">
+              <a href="www.linkedin.com/in/norazheng">
+                <span class="sr-only">linkedin</span>
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="contact-item">
+              <a href="https://twitter.com/nuozheng"
+                ><span class="sr-only">Twitter</span>
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="contact-item">
+              <a href="https://medium.com/@nuozheng"
+                ><span class="sr-only">Medium Blog Page</span>
+                <i class="fab fa-medium"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- <section class="resume">
+          <h2>Here's my resume</h2>
+
+          <p>
+            <a target="_blank" class="next-page" href="">Click to download</a>
+          </p>
+        </section> -->
+      </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./scripts/jquery.smoothState.js"></script>

@@ -201,6 +201,7 @@ h2,
 h3,
 h4 {
   font-family: "MADE Likes Slab", serif;
+  font-weight: 400;
 }
 
 ul {
@@ -223,6 +224,11 @@ a {
   color: #191919;
 }
 
+a:focus {
+  outline: none;
+  color: #f82749;
+}
+
 main {
   max-width: 1440px;
   max-height: 900px;
@@ -236,6 +242,45 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.next-page,
+.repo,
+.live-link {
+  text-transform: uppercase;
+  border-bottom: 1px solid #191919;
+}
+
+.next-page:focus, .next-page:hover,
+.repo:focus,
+.repo:hover,
+.live-link:focus,
+.live-link:hover {
+  color: #f82749;
+  font-style: italic;
+  border-bottom: 1px dashed #f82749;
+}
+
+@-webkit-keyframes shake {
+  from {
+    -webkit-transform: translateX(-15%);
+            transform: translateX(-15%);
+  }
+  to {
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
+  }
+}
+
+@keyframes shake {
+  from {
+    -webkit-transform: translateX(-15%);
+            transform: translateX(-15%);
+  }
+  to {
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
+  }
 }
 
 .menu-button {
@@ -376,14 +421,7 @@ main {
 .menu-item:hover,
 .menu-item:focus-within,
 .menu-link:focus {
-  outline: none;
   list-style: disc;
-  color: #f82749;
-}
-
-.menu-item:hover .menu-link,
-.menu-item:focus-within .menu-link,
-.menu-link:focus .menu-link {
   color: #f82749;
 }
 
@@ -410,42 +448,39 @@ main {
 }
 
 .view-my-work {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
-  grid-column: 2 / 6;
   -ms-grid-row: 8;
   -ms-grid-row-span: 1;
-  grid-row: 8 / 9;
-  grid-area: 8 / 2 / 9 / 6;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: 8 / 2 / 9 / 5;
+  -ms-grid-column-align: left;
+      justify-self: left;
 }
 
-.view-my-work a {
-  border-bottom: 1px #191919 solid;
-}
-
-.view-my-work a:focus, .view-my-work a:hover {
-  color: #f82749;
+.portfolio-page::before {
+  position: fixed;
+  content: '';
+  left: 0;
+  top: 35%;
+  display: block;
+  width: 50vmax;
+  height: 50vmax;
+  background: url("../assets/cloud.svg") no-repeat;
+  background-size: cover;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 .portfolio-title {
   position: fixed;
+  top: 10vh;
   left: 10%;
-  top: 25%;
 }
 
-.portfolio-title::after {
-  position: relative;
-  left: -10%;
-  top: -60px;
-  content: '';
-  display: block;
-  width: 50vmax;
-  height: 50vmax;
-  max-width: 700px;
-  background: url("../assets/crane.svg") no-repeat;
-  background-size: contain;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+.go-to-contact {
+  position: fixed;
+  left: 10%;
+  top: 35vh;
 }
 
 .projects {
@@ -469,23 +504,23 @@ main {
   min-width: 320px;
   padding: 3vmax 3vmax 0;
   margin: 0.5rem;
-  background: rgba(252, 248, 247, 0.6);
+  background: rgba(252, 248, 247, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-line-pack: justify;
       align-content: space-between;
 }
 
 .project:hover figcaption {
   opacity: 100;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .project figure {
@@ -495,6 +530,8 @@ main {
 }
 
 .project figcaption {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -504,9 +541,13 @@ main {
   background-color: rgba(252, 248, 247, 0.95);
 }
 
+.project figcaption h2 {
+  text-align: center;
+}
+
 .thumbnail {
-  -webkit-filter: contrast(90%) saturate(60%);
-          filter: contrast(90%) saturate(60%);
+  -webkit-filter: saturate(60%);
+          filter: saturate(60%);
 }
 
 .repo,
@@ -516,4 +557,121 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25;
           flex: 1 1 25;
+}
+
+.contact-page {
+  background: url("../assets/boat.svg") no-repeat right;
+  background-size: 50%;
+}
+
+.contact {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 7;
+  grid-area: 2 / 2 / -2 / 9;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 'title title title' 'thrilled thrilled thrilled' 'form form links' 'form form links';
+}
+
+.contact-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  margin: 0;
+}
+
+.thrilled {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: thrilled;
+}
+
+.message-form {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: form;
+}
+
+.resume {
+  grid-area: resume;
+}
+
+.contact-info {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: links;
+}
+
+.message-form input[type='text'],
+.message-form input[type='email'],
+.message-form textarea {
+  letter-spacing: 1px;
+  background: #fcf8f7;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  width: 90%;
+  resize: none;
+}
+
+.send-button {
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #191919;
+}
+
+.contact-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 2rem;
+}
+
+.contact-item:hover,
+.contact-item a:focus {
+  -webkit-animation: pulse 0.3s infinite alternate;
+          animation: pulse 0.3s infinite alternate;
+}
+
+.contact-item:hover a,
+.contact-item a:focus a {
+  color: #f82749;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }

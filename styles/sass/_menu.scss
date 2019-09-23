@@ -112,10 +112,6 @@
 .menu-item:hover,
 .menu-item:focus-within,
 .menu-link:focus {
-  outline: none;
   list-style: disc;
   color: $a-color;
-  .menu-link {
-    color: $a-color;
-  }
 }

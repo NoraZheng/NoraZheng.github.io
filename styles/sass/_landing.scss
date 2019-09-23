@@ -13,15 +13,6 @@
 }
 
 .view-my-work {
-  grid-column: 2 / 6;
-  grid-row: 8 / 9;
-
-  grid-area: 8 / 2 / 9 / 6;
-  a {
-    border-bottom: 1px $black solid;
-    &:focus,
-    &:hover {
-      color: $a-color;
-    }
-  }
+  grid-area: 8 / 2 / 9 / 5;
+  justify-self: left;
 }

@@ -1,0 +1,82 @@
+.contact-page {
+  background: url('../assets/boat.svg') no-repeat right;
+  background-size: 50%;
+}
+
+.contact {
+  grid-area: 2 / 2 / -2 / 9;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'title title title'
+    'thrilled thrilled thrilled'
+    'form form links'
+    'form form links';
+}
+
+.contact-title {
+  grid-area: title;
+  margin: 0;
+}
+.thrilled {
+  grid-area: thrilled;
+}
+
+.message-form {
+  grid-area: form;
+}
+
+.resume {
+  grid-area: resume;
+}
+
+.contact-info {
+  grid-area: links;
+}
+
+.message-form {
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    letter-spacing: 1px;
+    background: lighten($white, 5%);
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    width: 90%;
+    resize: none;
+  }
+}
+
+.send-button {
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $black;
+}
+
+.contact-items {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+
+.contact-item:hover,
+.contact-item a:focus {
+  animation: pulse 0.3s infinite alternate;
+  a {
+    color: $a-color;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}

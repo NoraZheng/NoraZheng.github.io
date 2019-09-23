@@ -1,21 +1,26 @@
+.portfolio-page::before {
+  position: fixed;
+  content: '';
+  left: 0;
+  top: 35%;
+  display: block;
+  width: 50vmax;
+  height: 50vmax;
+
+  background: url('../assets/cloud.svg') no-repeat;
+  background-size: cover;
+  transform: scaleX(-1);
+}
+
 .portfolio-title {
   position: fixed;
+  top: 10vh;
   left: 10%;
-  top: 25%;
-  // the crane image
-  &::after {
-    position: relative;
-    left: -10%;
-    top: -60px;
-    content: '';
-    display: block;
-    width: 50vmax;
-    height: 50vmax;
-    max-width: 700px;
-    background: url('../assets/crane.svg') no-repeat;
-    background-size: contain;
-    transform: scaleX(-1);
-  }
+}
+.go-to-contact {
+  position: fixed;
+  left: 10%;
+  top: 35vh;
 }
 .projects {
   z-index: 5;
@@ -30,15 +35,16 @@
   min-width: 320px;
   padding: 3vmax 3vmax 0;
   margin: 0.5rem;
-  background: rgba(lighten($white, 5%), 0.6);
+  background: rgba(lighten($white, 5%), 0.7);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-content: space-between;
+
   &:hover {
     figcaption {
       opacity: 100;
-      transition: all 0.2s;
+      transition: all 0.3s;
     }
   }
 
@@ -47,6 +53,7 @@
     position: relative;
   }
   figcaption {
+    transition: all 0.3s;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -54,10 +61,13 @@
     right: 0;
     opacity: 0;
     background-color: rgba(lighten($white, 5%), 0.95);
+    h2 {
+      text-align: center;
+    }
   }
 }
 .thumbnail {
-  filter: contrast(90%) saturate(60%);
+  filter: saturate(60%);
 }
 .repo,
 .live-link {

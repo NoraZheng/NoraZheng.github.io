@@ -17,6 +17,7 @@ h2,
 h3,
 h4 {
   font-family: $h-font;
+  font-weight: 400;
 }
 ul {
   list-style: none;
@@ -35,6 +36,10 @@ h1 {
 a {
   text-decoration: none;
   color: $black;
+  &:focus {
+    outline: none;
+    color: $a-color;
+  }
 }
 
 main {
@@ -45,4 +50,26 @@ main {
   grid-template-columns: repeat(16, calc(100vw / 16));
   grid-template-rows: repeat(10, 10vh);
   align-items: center;
+}
+
+.next-page,
+.repo,
+.live-link {
+  text-transform: uppercase;
+  border-bottom: 1px solid $black;
+  &:focus,
+  &:hover {
+    color: $a-color;
+    font-style: italic;
+    border-bottom: 1px dashed $a-color;
+  }
+}
+
+@keyframes shake {
+  from {
+    transform: translateX(-15%);
+  }
+  to {
+    transform: translateX(15%);
+  }
 }
