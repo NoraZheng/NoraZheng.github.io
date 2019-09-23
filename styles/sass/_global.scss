@@ -1,5 +1,5 @@
 html {
-	font-size: 100%;
+	font-size: calc(15px + (17 - 15) * (100vw - 320px) / (1440 - 320));
 }
 
 body {
@@ -29,6 +29,9 @@ img {
 }
 h1 {
 	font-size: calc(32px + (80 - 32) * (100vw - 320px) / (1440 - 320));
+}
+h2 {
+	font-size: calc(18px + (24 - 18) * (100vw - 320px) / (1440 - 320));
 }
 
 a {

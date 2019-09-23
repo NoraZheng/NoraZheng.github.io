@@ -1,15 +1,14 @@
 .about-page {
-	background: url('../assets/boat.svg') no-repeat right;
-	background-size: 45%;
+	// background: url('../assets/cloud.svg') no-repeat right;
+	background-size: 50%;
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .about-me {
-	margin-left: 5%;
-	width: 50%;
+	flex-basis: 50%;
 	p:last-child {
 		margin-top: 2rem;
 		a {
@@ -21,6 +20,17 @@
 	margin: 0;
 }
 .photo {
-	background: $s-color;
+	background: url('../assets/cloud.svg'),
+		radial-gradient(
+			rgba(lighten($s-color, 5%), 0.1),
+			rgba(lighten($s-color, 5%), 0.1)
+		);
+	background-size: 160%;
+	border: 5px solid $s-color;
 	border-radius: 50%;
+	overflow: hidden;
+	filter: brightness(1.1);
+	img {
+		filter: saturate(0.8) grayscale(0.1);
+	}
 }

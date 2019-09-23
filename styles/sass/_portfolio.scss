@@ -1,16 +1,17 @@
 .portfolio-page {
+	padding-right: 5%;
 	flex-direction: row;
 	justify-content: flex-end;
-	&::before {
+	&::after {
 		position: fixed;
 		content: '';
-		left: 0;
-		top: 35%;
+		left: 0%;
+		top: 25%;
 		display: block;
 		width: 50vmax;
-		height: 50vmax;
-		background: url('../assets/cloud.svg') no-repeat;
-		background-size: cover;
+		height: 60vmax;
+		background: url('../assets/crane.svg') no-repeat;
+		background-size: contain;
 		transform: scaleX(-1);
 	}
 }
@@ -18,55 +19,68 @@
 	position: fixed;
 	top: 10vh;
 	left: 10%;
+	z-index: 5;
+	h1 {
+		margin-bottom: 1rem;
+	}
 }
 
-.portfolio-title {
-	margin-bottom: 0;
-}
 .projects {
 	z-index: 5;
 	width: 50%;
-	margin: 1vmax 2vmax 1vmax 0;
 }
+
 .project {
-	padding: 3vmax 3vmax 0;
-	margin: 0.5rem auto;
-	background: rgba(lighten($white, 5%), 0.7);
+	background-color: $c-color;
+	padding: 1rem 6rem;
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
-	align-content: space-between;
+	flex-wrap: wrap;
 	&:hover {
 		figcaption {
 			opacity: 100;
 			transition: all 0.3s;
 		}
 	}
+	h2 {
+		border-top: 1px solid $black;
+		text-transform: uppercase;
+	}
+}
+figure {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	border: 1px solid $black;
+}
 
-	figure {
-		flex-basis: 100%;
-		position: relative;
-	}
-	figcaption {
-		transition: all 0.3s;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		opacity: 0;
-		background-color: rgba(lighten($white, 5%), 0.95);
-		h2 {
-			text-align: center;
-		}
-	}
+figcaption {
+	transition: all 0.3s;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	background-color: rgba(lighten($white, 10%), 0.95);
+	padding: 5% 15%;
 }
+
+.keywords {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: disc;
+}
+.keyword {
+	flex: 1 1 50%;
+}
+
 .thumbnail {
-	filter: saturate(60%);
+	filter: saturate(0.6) grayscale(0.1);
 }
+
 .repo,
 .live-link {
-	margin: 1.5vmax auto;
+	margin: 2vmax auto;
 	border-bottom: 1px solid $black;
-	flex: 1 1 25;
 }
