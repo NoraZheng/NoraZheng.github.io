@@ -114,4 +114,7 @@
 .menu-link:focus {
   list-style: disc;
   color: $a-color;
+  a {
+    color: $a-color;
+  }
 }

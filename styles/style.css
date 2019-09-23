@@ -425,6 +425,12 @@ main {
   color: #f82749;
 }
 
+.menu-item:hover a,
+.menu-item:focus-within a,
+.menu-link:focus a {
+  color: #f82749;
+}
+
 .landing-page {
   background: url("../assets/lily.svg") no-repeat 140% 90%;
   background-size: 65%;
@@ -557,6 +563,12 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25;
           flex: 1 1 25;
+}
+
+.about-me {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 8;
+  grid-area: 2 / 2 / -2 / 10;
 }
 
 .contact-page {
