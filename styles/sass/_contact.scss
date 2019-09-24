@@ -1,5 +1,4 @@
 .contact-page {
-	// animation-name: fadeInUp;
 	background: url('../assets/boat.svg') no-repeat right;
 	background-size: 50%;
 	align-items: flex-start;
@@ -8,8 +7,8 @@
 .contact {
 	background-color: $c-color;
 	padding: 2% 6%;
-	width: 60%;
-	margin-left: 5%;
+	width: 55%;
+	margin-left: 7%;
 }
 .contact-title {
 	margin: 0;
@@ -66,13 +65,21 @@ textarea {
 	a {
 		color: $a-color;
 	}
+	.icon {
+		animation: pulse 0.3s infinite alternate;
+	}
+}
+
+.icon {
+	width: 32px;
+	height: 32px;
 }
 
 @keyframes pulse {
 	from {
-		transform: scale(1);
+		transform: scale(0.9);
 	}
 	to {
-		transform: scale(1.2);
+		transform: scale(1.1);
 	}
 }

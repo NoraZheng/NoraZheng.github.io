@@ -76,17 +76,16 @@
 }
 
 .menu {
-	opacity: 0;
-	transition: all 0.3s;
-	z-index: -30;
-	position: fixed;
+	display: none;
 }
 
 .show-menu {
+	display: block;
 	background-color: $black;
-	opacity: 100;
+	animation: fadeIn 0.3s;
 	transition: all 0.3s;
 	z-index: 15;
+	position: fixed;
 }
 
 .menu-links {
