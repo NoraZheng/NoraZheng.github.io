@@ -43,13 +43,6 @@ a {
 	}
 }
 
-.smooth-state-container {
-	main {
-		animation-duration: 0.5s;
-		transition-timing-function: ease-in;
-		animation-fill-mode: both;
-	}
-}
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -59,42 +52,11 @@ a {
 		opacity: 1;
 	}
 }
-@keyframes fadeInRight {
-	0% {
-		opacity: 0;
-		transform: translate3d(100%, 0, 0);
-	}
 
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}
-@keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		transform: translate3d(0, 100%, 0);
-	}
-
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}
-@keyframes fadeInDown {
-	0% {
-		opacity: 0;
-		transform: translate3d(0, -100%, 0);
-	}
-
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}
 main {
-	max-width: 1440px;
-	max-height: 900px;
+	animation: fadeIn 0.7s both;
+	max-width: 1920px;
+	max-height: 1280px;
 	position: relative;
 	height: 100vh;
 	display: flex;

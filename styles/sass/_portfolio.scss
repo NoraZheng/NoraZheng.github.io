@@ -1,5 +1,5 @@
 .portfolio-page {
-	animation-name: fadeInDown;
+	// animation-name: fadeInDown;
 	padding-right: 5%;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -52,7 +52,6 @@ figure {
 	overflow: hidden;
 	width: 100%;
 	position: relative;
-	border: 1px solid $black;
 }
 
 figcaption {
@@ -78,6 +77,7 @@ figcaption {
 
 .thumbnail {
 	filter: saturate(0.6) grayscale(0.1);
+	border: 1px solid $black;
 }
 
 .repo,
