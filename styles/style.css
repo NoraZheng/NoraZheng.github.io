@@ -295,8 +295,12 @@ main {
 
 .menu-button {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  min-width: 35px;
+  min-height: 35px;
+  max-width: 60px;
+  max-height: 60px;
+  width: 5vw;
+  height: 5vw;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -672,7 +676,7 @@ main {
             flex-direction: column;
   }
   .project a {
-    margin: 0 auto;
+    margin: 2rem auto 1rem;
   }
   .thumbnail {
     -webkit-box-flex: 1;
@@ -683,9 +687,6 @@ main {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
-  }
-  .project-info {
-    padding-top: 0;
   }
 }
 
@@ -705,9 +706,9 @@ main {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 415px) {
   .project-info {
-    margin-top: -15%;
+    padding-top: 0;
   }
 }
 
@@ -771,7 +772,7 @@ main {
 }
 
 .contact {
-  background-color: rgba(252, 248, 247, 0.6);
+  background-color: rgba(252, 248, 247, 0.8);
   padding: 2% 6%;
   width: 55%;
   margin-left: 7%;
@@ -884,5 +885,36 @@ textarea {
   to {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-page {
+    background-size: 70%;
+  }
+  .contact {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .contact-page {
+    background-size: 100%;
+  }
+  .contact {
+    width: 90%;
+  }
+}
+
+@media (max-width: 530px) {
+  input[type='text'],
+  input[type='email'] {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .contact-page,
+  .contact {
+    background: none;
   }
 }
