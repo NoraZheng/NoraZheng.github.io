@@ -77,19 +77,11 @@ main {
 	padding: 5px 0;
 	border: 2px solid transparent;
 	border-bottom-color: $black;
-
+	transition: all 0.3s;
 	&:focus,
 	&:hover {
 		color: $a-color;
-		border: 2px dashed $a-color;
+		border-bottom: 2px dashed $a-color;
+		transition: all 0.3s;
 	}
 }
-
-// @keyframes shake {
-// 	from {
-// 		transform: translateX(-15%);
-// 	}
-// 	to {
-// 		transform: translateX(15%);
-// 	}
-// }

@@ -23,7 +23,6 @@ form {
 input[type='text'],
 input[type='email'] {
 	flex-basis: 49%;
-	// border: 2px solid transparent;
 	border: 2px solid $black;
 }
 input[type='text'],
@@ -42,7 +41,8 @@ textarea,
 .send-button {
 	border: 2px solid $black;
 }
-.send-button:hover {
+.send-button:hover,
+.send-button:focus {
 	border: 2px dashed $a-color;
 	color: $a-color;
 }
@@ -61,27 +61,20 @@ textarea {
 
 .contact-item:hover,
 .contact-item a:focus {
-	animation: pulse 0.3s infinite alternate;
+	transform: scale(1.1);
+	transition: all 0.3s;
 	a {
 		color: $a-color;
 	}
 	.icon {
-		animation: pulse 0.3s infinite alternate;
+		transform: scale(1.1);
+		transition: all 0.3s;
 	}
 }
 
 .icon {
 	width: 32px;
 	height: 32px;
-}
-
-@keyframes pulse {
-	from {
-		transform: scale(0.9);
-	}
-	to {
-		transform: scale(1.1);
-	}
 }
 
 @media (max-width: 1024px) {

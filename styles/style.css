@@ -282,6 +282,8 @@ main {
   padding: 5px 0;
   border: 2px solid transparent;
   border-bottom-color: #191919;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .next-page:focus, .next-page:hover,
@@ -290,7 +292,9 @@ main {
 .live-link:focus,
 .live-link:hover {
   color: #f82749;
-  border: 2px dashed #f82749;
+  border-bottom: 2px dashed #f82749;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .menu-button {
@@ -547,7 +551,7 @@ main {
       -ms-flex: 2 1 70%;
           flex: 2 1 70%;
   height: 100vh;
-  padding: 0 2%;
+  padding: 2%;
 }
 
 .project {
@@ -591,6 +595,11 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.project-info h2 {
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .keywords {
@@ -798,6 +807,25 @@ main {
   }
 }
 
+.skills-page {
+  text-align: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.logo {
+  width: 80px;
+}
+
 .contact-page {
   background: url("../assets/boat.svg") no-repeat right;
   background-size: 50%;
@@ -857,7 +885,8 @@ textarea:focus,
   border: 2px solid #191919;
 }
 
-.send-button:hover {
+.send-button:hover,
+.send-button:focus {
   border: 2px dashed #f82749;
   color: #f82749;
 }
@@ -881,8 +910,10 @@ textarea {
 
 .contact-item:hover,
 .contact-item a:focus {
-  -webkit-animation: pulse 0.3s infinite alternate;
-          animation: pulse 0.3s infinite alternate;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .contact-item:hover a,
@@ -892,35 +923,15 @@ textarea {
 
 .contact-item:hover .icon,
 .contact-item a:focus .icon {
-  -webkit-animation: pulse 0.3s infinite alternate;
-          animation: pulse 0.3s infinite alternate;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .icon {
   width: 32px;
   height: 32px;
-}
-
-@-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  to {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-}
-
-@keyframes pulse {
-  from {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  to {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
 }
 
 @media (max-width: 1024px) {

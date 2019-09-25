@@ -1,10 +1,6 @@
 .portfolio-page {
-	// background: url('../assets/crane.svg') fixed left no-repeat;
-	// background-size: 50%;
 	flex-direction: row;
 	align-items: flex-start;
-
-	// align-items: center;
 }
 
 .portfolio-titles {
@@ -18,23 +14,11 @@
 		flex: 1 1 100%;
 	}
 }
-// 	top: 10vh;
-// 	left: 10%;
-// 	z-index: 5;
-// 	h1 {
-// 		margin-bottom: 1rem;
-// 	}
-// }
-
-// .projects {
-// 	z-index: 5;
-// 	width: 50%;
-// }
 
 .portfolio-title {
 	margin: 30vh 0 0;
 	&::after {
-		animation: fadeIn 0.4s;
+		animation: fadeIn 0.4s both;
 		position: fixed;
 		bottom: 0;
 		left: 0;
@@ -48,13 +32,12 @@
 		transform: scaleX(-1);
 	}
 }
-// text-align: center;
 
 .projects-box {
 	overflow: auto;
 	flex: 2 1 70%;
 	height: 100vh;
-	padding: 0 2%;
+	padding: 2%;
 }
 
 .project {
@@ -65,7 +48,6 @@
 	align-items: center;
 	&:nth-child(even) {
 		flex-direction: row-reverse;
-		// text-align: right;
 	}
 }
 .project-info,
@@ -75,53 +57,15 @@
 
 .project-info {
 	padding: 1rem;
-
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	h2 {
+		text-transform: uppercase;
+		text-align: center;
+	}
 }
-
-// .project-info {
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: space-between;
-// 	align-items: flex-start;
-// }
-// .project {
-// 	background-color: $c-color;
-// 	padding: 1rem 6rem;
-// 	display: flex;
-// 	justify-content: center;
-// 	flex-wrap: wrap;
-// 	&:hover {
-// 		figcaption {
-// 			opacity: 100;
-// 			transition: all 0.3s;
-// 		}
-// 	}
-// 	h2 {
-// 		border-top: 1px solid $black;
-// 		text-transform: uppercase;
-// 	}
-// }
-// figure {
-// 	overflow: hidden;
-// 	width: 100%;
-// 	position: relative;
-// }
-
-// figcaption {
-// 	transition: all 0.3s;
-// 	position: absolute;
-// 	top: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	right: 0;
-// 	opacity: 0;
-// 	background-color: rgba(lighten($white, 10%), 0.95);
-// 	padding: 5% 15%;
-// }
 
 .keywords {
 	padding-left: 1rem;
@@ -172,7 +116,6 @@
 		justify-content: space-between;
 	}
 	.project {
-		// background: transparent;
 		flex: 1 1 45%;
 		max-width: 48%;
 		min-height: 550px;
