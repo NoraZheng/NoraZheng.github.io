@@ -101,6 +101,13 @@ textarea {
 	input[type='email'] {
 		flex-basis: 100%;
 	}
+
+	form {
+		justify-content: center;
+	}
+	.contact-title {
+		text-align: center;
+	}
 	.contact-page,
 	.contact {
 		background: none;

@@ -94,8 +94,8 @@
 	}
 
 	.portfolio-title {
-		margin: 0;
-		text-align-last: center;
+		margin: 1rem auto 0;
+		text-align: center;
 
 		&::after {
 			display: none;
@@ -118,7 +118,7 @@
 	.project {
 		flex: 1 1 45%;
 		max-width: 48%;
-		min-height: 550px;
+		min-height: 600px;
 		flex-direction: column;
 		&:nth-child(even) {
 			flex-direction: column;
@@ -137,6 +137,7 @@
 
 @media (max-width: 648px) {
 	.projects-box {
+		margin-top: 1rem;
 		padding: 0;
 	}
 	.projects {

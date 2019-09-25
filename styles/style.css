@@ -529,8 +529,8 @@ main {
 }
 
 .portfolio-title::after {
-  -webkit-animation: fadeIn 0.4s;
-          animation: fadeIn 0.4s;
+  -webkit-animation: fadeIn 0.4s both;
+          animation: fadeIn 0.4s both;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -640,8 +640,8 @@ main {
     background-size: 60%;
   }
   .portfolio-title {
-    margin: 0;
-    text-align-last: center;
+    margin: 1rem auto 0;
+    text-align: center;
   }
   .portfolio-title::after {
     display: none;
@@ -672,7 +672,7 @@ main {
         -ms-flex: 1 1 45%;
             flex: 1 1 45%;
     max-width: 48%;
-    min-height: 550px;
+    min-height: 600px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -701,6 +701,7 @@ main {
 
 @media (max-width: 648px) {
   .projects-box {
+    margin-top: 1rem;
     padding: 0;
   }
   .projects {
@@ -805,25 +806,6 @@ main {
   .about-me-info a {
     margin: 0.5rem auto;
   }
-}
-
-.skills-page {
-  text-align: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.logo {
-  width: 80px;
 }
 
 .contact-page {
@@ -958,6 +940,14 @@ textarea {
   input[type='email'] {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-title {
+    text-align: center;
   }
   .contact-page,
   .contact {
