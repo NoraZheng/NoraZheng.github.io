@@ -9,6 +9,7 @@
 	position: fixed;
 	top: 20px;
 	left: 20px;
+	padding: 5px;
 	font-size: 1.5rem;
 	font-weight: 400;
 	background-color: $black;
@@ -20,6 +21,7 @@
 	&:focus {
 		background: $a-color;
 		border-radius: 30%;
+		outline: none;
 	}
 	&::before {
 		content: '';
@@ -110,5 +112,12 @@
 	color: $a-color;
 	a {
 		color: $a-color;
+	}
+}
+
+@media (max-width: 420px) {
+	.menu-button {
+		top: 10px;
+		left: 10px;
 	}
 }

@@ -36,6 +36,7 @@ textarea,
 	resize: none;
 	&:focus {
 		border: 2px dashed $a-color;
+		outline: none;
 	}
 }
 .send-button {

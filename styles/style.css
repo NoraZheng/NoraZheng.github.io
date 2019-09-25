@@ -308,6 +308,7 @@ main {
   position: fixed;
   top: 20px;
   left: 20px;
+  padding: 5px;
   font-size: 1.5rem;
   font-weight: 400;
   background-color: #191919;
@@ -321,6 +322,7 @@ main {
 .menu-button:hover, .menu-button:focus {
   background: #f82749;
   border-radius: 30%;
+  outline: none;
 }
 
 .menu-button::before {
@@ -436,6 +438,13 @@ main {
 .menu-item:focus-within a,
 .menu-link:focus a {
   color: #f82749;
+}
+
+@media (max-width: 420px) {
+  .menu-button {
+    top: 10px;
+    left: 10px;
+  }
 }
 
 .landing-page {
@@ -860,6 +869,7 @@ input[type='email']:focus,
 textarea:focus,
 .send-button:focus {
   border: 2px dashed #f82749;
+  outline: none;
 }
 
 .send-button {
