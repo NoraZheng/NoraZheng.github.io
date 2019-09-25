@@ -21,6 +21,7 @@
 }
 .photo {
 	flex: 1 1 40%;
+	max-width: 450px;
 	background: url('../assets/cloud.svg'),
 		radial-gradient(
 			rgba(lighten($s-color, 10%), 0.2),
@@ -30,7 +31,6 @@
 	border: 5px solid $s-color;
 	border-radius: 50%;
 	overflow: hidden;
-	filter: brightness(1.1);
 	img {
 		filter: saturate(0.8) grayscale(0.1);
 	}

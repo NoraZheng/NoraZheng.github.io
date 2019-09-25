@@ -758,13 +758,12 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40%;
           flex: 1 1 40%;
+  max-width: 450px;
   background: url("../assets/cloud.svg"), radial-gradient(rgba(250, 183, 192, 0.2), rgba(250, 183, 192, 0.2));
   background-size: 170%;
   border: 5px solid #f78797;
   border-radius: 50%;
   overflow: hidden;
-  -webkit-filter: brightness(1.1);
-          filter: brightness(1.1);
 }
 
 .photo img {
