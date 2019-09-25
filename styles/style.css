@@ -495,9 +495,9 @@ main {
 
 .portfolio-titles {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 25%;
-          flex: 1 1 25%;
-  padding-left: 5%;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  padding-left: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,21 +543,21 @@ main {
       -ms-flex: 2 1 70%;
           flex: 2 1 70%;
   height: 100vh;
-  margin: 0 auto;
-  padding: 1rem;
+  padding: 0 2%;
 }
 
 .project {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  margin-bottom: 3rem;
+  background: rgba(252, 248, 247, 0.8);
+  margin-bottom: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .project:nth-child(even) {
@@ -567,16 +567,15 @@ main {
           flex-direction: row-reverse;
 }
 
-.thumbnail,
-.project-info {
+.project-info,
+.thumbnail {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+      -ms-flex: 1 1 46%;
+          flex: 1 1 46%;
 }
 
 .project-info {
-  padding: 1rem 2rem;
-  background: rgba(252, 248, 247, 0.9);
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -613,6 +612,103 @@ main {
 .live-link,
 .repo {
   margin-right: 3rem;
+}
+
+@media (max-width: 1240px) {
+  .portfolio-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: url("../assets/crane.svg") fixed center no-repeat;
+    background-size: 60%;
+  }
+  .portfolio-title {
+    margin: 0;
+    text-align-last: center;
+  }
+  .portfolio-title::after {
+    display: none;
+  }
+  .portfolio-titles {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 5%;
+            flex: 1 1 5%;
+  }
+  .portfolio-titles a {
+    margin: 0 auto 0.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .project {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 45%;
+            flex: 1 1 45%;
+    max-width: 48%;
+    min-height: 550px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project a {
+    margin: 0 auto;
+  }
+  .thumbnail {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+  .keywords {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  .project-info {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 648px) {
+  .projects-box {
+    padding: 0;
+  }
+  .projects {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .project {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-info {
+    margin-top: -15%;
+  }
 }
 
 .about-page {
