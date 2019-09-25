@@ -7,10 +7,9 @@
 .greeting-box {
 	width: 50%;
 	margin-left: 5%;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: space-between;
+	a {
+		margin-right: 4rem;
+	}
 }
 .hello {
 	margin: 0;
@@ -19,4 +18,31 @@
 
 .hello-info {
 	width: 80%;
+}
+
+@media (max-width: 812px) {
+	.greeting-box {
+		width: 80%;
+	}
+	.hello-info {
+		width: 70%;
+	}
+}
+
+@media (max-width: 550px) {
+	.greeting-box {
+		width: 100%;
+	}
+	.hello-info {
+		width: 90%;
+	}
+	.landing-page {
+		background-size: 82.5%;
+		background-position-y: 98%;
+	}
+}
+@media (max-width: 370px) {
+	.hello-info {
+		width: 100%;
+	}
 }

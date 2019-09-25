@@ -218,11 +218,7 @@ h1 {
 }
 
 h2 {
-  font-size: calc(24px + (32 - 24) * (100vw - 320px) / (1440 - 320));
-  margin: 0;
-}
-
-p {
+  font-size: calc(18px + (32 - 18) * (100vw - 320px) / (1440 - 320));
   margin: 0;
 }
 
@@ -255,8 +251,8 @@ a:focus {
 }
 
 main {
-  -webkit-animation: fadeIn 0.7s both;
-          animation: fadeIn 0.7s both;
+  -webkit-animation: fadeIn 0.8s both;
+          animation: fadeIn 0.8s both;
   max-width: 1920px;
   max-height: 1280px;
   position: relative;
@@ -271,6 +267,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 .hide-main {
@@ -294,28 +291,6 @@ main {
 .live-link:hover {
   color: #f82749;
   border: 2px dashed #f82749;
-}
-
-@-webkit-keyframes shake {
-  from {
-    -webkit-transform: translateX(-15%);
-            transform: translateX(-15%);
-  }
-  to {
-    -webkit-transform: translateX(15%);
-            transform: translateX(15%);
-  }
-}
-
-@keyframes shake {
-  from {
-    -webkit-transform: translateX(-15%);
-            transform: translateX(-15%);
-  }
-  to {
-    -webkit-transform: translateX(15%);
-            transform: translateX(15%);
-  }
 }
 
 .menu-button {
@@ -344,7 +319,7 @@ main {
   content: '';
   display: block;
   width: 50%;
-  height: 1px;
+  height: 2px;
   background: #f5e7e5;
   position: absolute;
   top: 40%;
@@ -359,7 +334,7 @@ main {
   position: absolute;
   background: #f5e7e5;
   width: 35%;
-  height: 1px;
+  height: 2px;
   background: #f5e7e5;
   bottom: 40%;
   left: 25%;
@@ -387,7 +362,7 @@ main {
 
 .menu-button-close::before {
   width: 50%;
-  top: 50%;
+  top: 48%;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   background-color: #f82749;
@@ -399,7 +374,7 @@ main {
   width: 50%;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  bottom: 50%;
+  bottom: 48%;
   background-color: #f82749;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -410,34 +385,28 @@ main {
 }
 
 .show-menu {
-  display: block;
   background-color: #191919;
   -webkit-animation: fadeIn 0.3s;
           animation: fadeIn 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   z-index: 15;
   position: fixed;
-}
-
-.menu-links {
+  height: 100vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: "MADE Likes Slab", serif;
-  height: 100vh;
-  width: 100vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 30px;
+}
+
+.menu-links {
+  font-family: "MADE Likes Slab", serif;
+  text-align: center;
+  font-size: calc(24px + (30 - 24) * (100vw - 320px) / (1440 - 320));
 }
 
 .menu-link {
@@ -445,7 +414,7 @@ main {
 }
 
 .menu-link-name {
-  font-size: calc(24px + (72 - 24) * (100vw - 320px) / (1440 - 320));
+  font-size: calc(46px + (72 - 46) * (100vw - 320px) / (1440 - 320));
 }
 
 .menu-item:hover,
@@ -471,19 +440,10 @@ main {
 .greeting-box {
   width: 50%;
   margin-left: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.greeting-box a {
+  margin-right: 4rem;
 }
 
 .hello {
@@ -495,25 +455,86 @@ main {
   width: 80%;
 }
 
+@media (max-width: 812px) {
+  .greeting-box {
+    width: 80%;
+  }
+  .hello-info {
+    width: 70%;
+  }
+}
+
+@media (max-width: 550px) {
+  .greeting-box {
+    width: 100%;
+  }
+  .hello-info {
+    width: 90%;
+  }
+  .landing-page {
+    background-size: 82.5%;
+    background-position-y: 98%;
+  }
+}
+
+@media (max-width: 370px) {
+  .hello-info {
+    width: 100%;
+  }
+}
+
 .portfolio-page {
-  background: url("../assets/crane.svg") fixed center no-repeat;
-  background-size: 50%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .portfolio-titles {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  padding-left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.portfolio-titles h1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
 }
 
 .portfolio-title {
-  margin: 0 2rem;
+  margin: 30vh 0 0;
+}
+
+.portfolio-title::after {
+  -webkit-animation: fadeIn 0.4s;
+          animation: fadeIn 0.4s;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: '';
+  width: 32vmax;
+  height: 400px;
+  background: url("../assets/crane.svg") no-repeat left center;
+  background-size: contain;
+  z-index: -5;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 .projects-box {
@@ -521,18 +542,16 @@ main {
   -webkit-box-flex: 2;
       -ms-flex: 2 1 70%;
           flex: 2 1 70%;
-  width: 100%;
-  height: 90vh;
+  height: 100vh;
   margin: 0 auto;
-  padding: 0 5vmin;
+  padding: 1rem;
 }
 
 .project {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
-  width: 80%;
-  margin: 10px auto;
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -593,7 +612,7 @@ main {
 
 .live-link,
 .repo {
-  margin-right: 2vmax;
+  margin-right: 3rem;
 }
 
 .about-page {
@@ -622,6 +641,10 @@ main {
 
 .about-me p:last-child a {
   margin-right: 2rem;
+}
+
+.underline {
+  border-bottom: 2px solid #191919;
 }
 
 .about-title {
@@ -686,7 +709,7 @@ textarea,
 .send-button {
   letter-spacing: 1px;
   background: #f9f1f0;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0;
   padding: 0.5rem;
   resize: none;
 }

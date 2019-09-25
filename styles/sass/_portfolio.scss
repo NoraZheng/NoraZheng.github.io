@@ -1,30 +1,22 @@
-// 	// animation-name: fadeInDown;
-// 	padding-right: 5%;
-// 	flex-direction: row;
-// 	justify-content: flex-end;
-// 	&::after {
-// 		position: fixed;
-// 		content: '';
-// 		left: 0%;
-// 		top: 25%;
-// 		display: block;
-// 		width: 50vmax;
-// 		height: 60vmax;
-// 		background: url('../assets/crane.svg') no-repeat;
-// 		background-size: contain;
-// 		transform: scaleX(-1);
-// 	}
-// }
 .portfolio-page {
-	background: url('../assets/crane.svg') fixed center no-repeat;
-	background-size: 50%;
-	// flex-direction: row;
+	// background: url('../assets/crane.svg') fixed left no-repeat;
+	// background-size: 50%;
+	flex-direction: row;
+	align-items: flex-start;
+
+	// align-items: center;
 }
 
 .portfolio-titles {
+	flex: 1 1 25%;
+	padding-left: 5%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	h1 {
+		flex: 1 1 100%;
+	}
 }
 // 	top: 10vh;
 // 	left: 10%;
@@ -40,35 +32,37 @@
 // }
 
 .portfolio-title {
-	margin: 0 2rem;
-	// &::after {
-	// 	position: fixed;
-	// 	bottom: 0;
-	// 	right: 0;
-	// 	left: 0;
-	// 	display: block;
-	// 	content: '';
-	// 	width: 250px;
-	// 	height: 250px;
-	// 	background: url('../assets/crane.svg') no-repeat;
-	// 	background-size: contain;
-	// 	filter: drop-shadow(1px 1px 5px #bbb);
+	margin: 30vh 0 0;
+	&::after {
+		animation: fadeIn 0.4s;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		display: block;
+		content: '';
+		width: 32vmax;
+		height: 400px;
+		background: url('../assets/crane.svg') no-repeat left center;
+		background-size: contain;
+		z-index: -5;
+		transform: scaleX(-1);
+	}
 }
 // text-align: center;
 
 .projects-box {
 	overflow: auto;
 	flex: 2 1 70%;
-	width: 100%;
-	height: 90vh;
+	// width: 100%;
+	height: 100vh;
 	margin: 0 auto;
-	padding: 0 5vmin;
+	padding: 1rem;
 }
 
 .project {
 	flex: 1 1 100%;
-	width: 80%;
-	margin: 10px auto;
+	// width: 80%;
+	margin-bottom: 3rem;
 	display: flex;
 	justify-content: center;
 	&:nth-child(even) {
@@ -146,5 +140,5 @@
 
 .live-link,
 .repo {
-	margin-right: 2vmax;
+	margin-right: 3rem;
 }
