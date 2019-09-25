@@ -713,30 +713,26 @@ main {
 }
 
 .about-page {
-  background-size: 50%;
-  height: 100vh;
+  padding: 5%;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .about-me {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 60%;
+          flex: 1 1 60%;
 }
 
-.about-me p:last-child {
-  margin-top: 2rem;
-}
-
-.about-me p:last-child a {
+.about-me a {
   margin-right: 2rem;
 }
 
@@ -749,8 +745,11 @@ main {
 }
 
 .photo {
-  background: url("../assets/cloud.svg"), radial-gradient(rgba(249, 159, 172, 0.1), rgba(249, 159, 172, 0.1));
-  background-size: 160%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40%;
+          flex: 1 1 40%;
+  background: url("../assets/cloud.svg"), radial-gradient(rgba(250, 183, 192, 0.2), rgba(250, 183, 192, 0.2));
+  background-size: 170%;
   border: 5px solid #f78797;
   border-radius: 50%;
   overflow: hidden;
@@ -761,6 +760,42 @@ main {
 .photo img {
   -webkit-filter: saturate(0.8) grayscale(0.1);
           filter: saturate(0.8) grayscale(0.1);
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    display: block;
+    padding: 5% 0 0;
+  }
+  .photo {
+    margin: 0 auto;
+    width: 40vw;
+    height: 40vw;
+    min-width: 200px;
+    min-height: 200px;
+  }
+  .about-title {
+    text-align: center;
+  }
+  .about-me {
+    width: 100%;
+  }
+  .about-me a {
+    display: inline-block;
+  }
+  .about-me p {
+    padding: 0 5%;
+  }
+  .about-me p:last-child {
+    text-align: center;
+  }
+  .about-me-info {
+    overflow: auto;
+    height: calc(100vh - 300px);
+  }
+  .about-me-info a {
+    margin: 0.5rem auto;
+  }
 }
 
 .contact-page {

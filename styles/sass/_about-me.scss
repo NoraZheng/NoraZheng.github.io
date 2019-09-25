@@ -1,21 +1,18 @@
 .about-page {
-	// animation-name: fadeInRight;
-	background-size: 50%;
-	height: 100vh;
-	flex-direction: row;
-	justify-content: space-evenly;
+	padding: 5%;
+	flex-direction: row-reverse;
+	justify-content: center;
 	align-items: center;
 }
 
 .about-me {
-	flex-basis: 50%;
-	p:last-child {
-		margin-top: 2rem;
-		a {
-			margin-right: 2rem;
-		}
+	flex: 1 1 60%;
+
+	a {
+		margin-right: 2rem;
 	}
 }
+
 .underline {
 	border-bottom: 2px solid $black;
 }
@@ -23,17 +20,54 @@
 	margin: 0;
 }
 .photo {
+	flex: 1 1 40%;
 	background: url('../assets/cloud.svg'),
 		radial-gradient(
-			rgba(lighten($s-color, 5%), 0.1),
-			rgba(lighten($s-color, 5%), 0.1)
+			rgba(lighten($s-color, 10%), 0.2),
+			rgba(lighten($s-color, 10%), 0.2)
 		);
-	background-size: 160%;
+	background-size: 170%;
 	border: 5px solid $s-color;
 	border-radius: 50%;
 	overflow: hidden;
 	filter: brightness(1.1);
 	img {
 		filter: saturate(0.8) grayscale(0.1);
+	}
+}
+
+@media (max-width: 768px) {
+	.about-page {
+		display: block;
+		padding: 5% 0 0;
+	}
+	.photo {
+		margin: 0 auto;
+		width: 40vw;
+		height: 40vw;
+		min-width: 200px;
+		min-height: 200px;
+	}
+	.about-title {
+		text-align: center;
+	}
+	.about-me {
+		width: 100%;
+		a {
+			display: inline-block;
+		}
+		p {
+			padding: 0 5%;
+		}
+		p:last-child {
+			text-align: center;
+		}
+	}
+	.about-me-info {
+		overflow: auto;
+		height: calc(100vh - 300px);
+		a {
+			margin: 0.5rem auto;
+		}
 	}
 }
