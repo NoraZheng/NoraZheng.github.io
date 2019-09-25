@@ -565,7 +565,7 @@ main {
 
 .project {
   background: rgba(252, 248, 247, 0.8);
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
