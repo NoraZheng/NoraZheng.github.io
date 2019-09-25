@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	background-color: $white;
+	background: linear-gradient(60deg, darken($white, 2%), lighten($white, 2%));
 	font-family: $m-font;
 	letter-spacing: 1px;
 	color: $black;
@@ -31,7 +31,11 @@ h1 {
 	font-size: calc(32px + (80 - 32) * (100vw - 320px) / (1440 - 320));
 }
 h2 {
-	font-size: calc(18px + (24 - 18) * (100vw - 320px) / (1440 - 320));
+	font-size: calc(24px + (32 - 24) * (100vw - 320px) / (1440 - 320));
+	margin: 0;
+}
+p {
+	margin: 0;
 }
 
 a {
@@ -71,12 +75,14 @@ main {
 .repo,
 .live-link {
 	text-transform: uppercase;
-	border-bottom: 1px solid $black;
+	margin-top: 1rem;
+	padding: 5px 0;
+	border: 2px solid transparent;
+	border-bottom-color: $black;
 	&:focus,
 	&:hover {
 		color: $a-color;
-		font-style: italic;
-		border-bottom: 1px dashed $a-color;
+		border: 2px dashed $a-color;
 	}
 }
 

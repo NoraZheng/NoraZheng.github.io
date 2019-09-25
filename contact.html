@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="referrer" content="origin">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="./styles/style.css" />
   <title>Nora Zheng | Front-end Developer | Contact</title>
@@ -28,7 +29,7 @@
           <a href="about-me.html" class="menu-link"><span class="menu-link-name">about me</span></a>
         </li>
         <li class="menu-item">
-          <a href="toolbox.html" class="menu-link"><span class="menu-link-name">toolbox</span></a>
+          <a href="skills.html" class="menu-link"><span class="menu-link-name">skills</span></a>
         </li>
         <li class="menu-item">
           <a href="contact.html" class="menu-link"><span class="menu-link-name">contact</span></a>
@@ -44,21 +45,18 @@
         <p class="thrilled">
           Send me a message! I'll be thrilled to hear from you :D
         </p>
-        <form method="POST" action="http://www.focuspocus.io/magic/2e33c01f9fe7c96b39132061d4d5b991"
-          class="message-form">
-          <!-- <h2 class="form-title">Send me a message</h2> -->
 
+        <form method="POST" action="https://formspree.io/zhengnuo@gmail.com">
           <label for="name" class="visually-hidden">your name</label>
           <input id="name" name="name" type="text" placeholder="Name" required />
 
-          <label for="email" class="visually-hidden" required>email</label>
+          <label for="email" class="visually-hidden" required>your email</label>
           <input id="email" name="email" type="email" placeholder="Email" required />
 
           <label for="message" class="visually-hidden">message</label>
           <textarea placeholder="Message" name="message" id="message" cols="30" rows="7"></textarea>
           <input type="submit" value="Send Message" class="send-button" />
         </form>
-
 
         <ul class="contact-items">
           <li class="contact-item">
