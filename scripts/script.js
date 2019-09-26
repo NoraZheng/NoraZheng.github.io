@@ -1,37 +1,38 @@
 // for arrow key navigation
 const page = {};
 const currentPage = window.location.pathname;
+console.log(currentPage);
 switch (currentPage) {
 	case '/':
-		page.nextPage = 'portfolio.html';
+		page.nextPage = 'about-me.html';
 		page.prevPage = 'contact.html';
 		break;
 	case '/index.html':
-		page.nextPage = 'portfolio.html';
+		page.nextPage = 'about-me.html';
 		page.prevPage = 'contact.html';
 		break;
-	case '/portfolio.html':
-		page.nextPage = 'about-me.html';
+	case '/about-me.html':
+		page.nextPage = 'portfolio.html';
 		page.prevPage = 'index.html';
 		break;
-	case '/about-me.html':
+	case '/portfolio.html':
 		page.nextPage = 'contact.html';
-		page.prevPage = 'portfolio.html';
+		page.prevPage = 'about-me.html';
 		break;
 	case '/contact.html':
 		page.nextPage = 'index.html';
-		page.prevPage = 'about-me.html';
+		page.prevPage = 'portfolio.html';
 		break;
 }
 
-const toggleMenu = () => {
+page.toggleMenu = () => {
 	$('.menu').toggleClass('show-menu');
 	$('.menu-button').toggleClass('menu-button-close');
 	$('main').toggleClass('hide-main');
 };
 
 $(function() {
-	$('#main').smoothState();
+	$('#main').smoothState({ blacklist: '.no-smoothState' });
 	//document ready
 
 	$(document).keydown(function(e) {
@@ -49,10 +50,9 @@ $(function() {
 				window.location.pathname = page.nextPage;
 				break;
 		}
-		e.preventDefault();
 	});
 	$('.menu-button').on('click', () => {
-		toggleMenu();
+		page.toggleMenu();
 	});
 	// end of document ready
 });
