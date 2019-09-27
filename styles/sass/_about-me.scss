@@ -35,39 +35,3 @@
 		filter: saturate(0.8) grayscale(0.1);
 	}
 }
-
-@media (max-width: 768px) {
-	.about-page {
-		display: block;
-		padding: 5% 0 0;
-	}
-	.photo {
-		margin: 0 auto;
-		width: 40vw;
-		height: 40vw;
-		min-width: 200px;
-		min-height: 200px;
-	}
-	.about-title {
-		text-align: center;
-	}
-	.about-me {
-		width: 100%;
-		a {
-			display: inline-block;
-		}
-		p {
-			padding: 0 5%;
-		}
-		p:last-child {
-			text-align: center;
-		}
-	}
-	.about-me-info {
-		overflow: auto;
-		height: calc(100vh - 300px);
-		a {
-			margin: 0.5rem auto;
-		}
-	}
-}

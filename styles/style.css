@@ -440,13 +440,6 @@ main {
   color: #f82749;
 }
 
-@media (max-width: 420px) {
-  .menu-button {
-    top: 10px;
-    left: 10px;
-  }
-}
-
 .landing-page {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
@@ -470,34 +463,6 @@ main {
 
 .hello-info {
   width: 80%;
-}
-
-@media (max-width: 812px) {
-  .greeting-box {
-    width: 80%;
-  }
-  .hello-info {
-    width: 70%;
-  }
-}
-
-@media (max-width: 550px) {
-  .greeting-box {
-    width: 100%;
-  }
-  .hello-info {
-    width: 90%;
-  }
-  .landing-page {
-    background-size: 82.5%;
-    background-position-y: 98%;
-  }
-}
-
-@media (max-width: 370px) {
-  .hello-info {
-    width: 100%;
-  }
 }
 
 .portfolio-page {
@@ -636,101 +601,6 @@ main {
   margin-right: 3rem;
 }
 
-@media (max-width: 1240px) {
-  .portfolio-page {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: url("../assets/crane.svg") fixed center no-repeat;
-    background-size: 60%;
-  }
-  .portfolio-title {
-    margin: 1rem auto 0;
-    text-align: center;
-  }
-  .portfolio-title::after {
-    display: none;
-  }
-  .portfolio-titles {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 5%;
-            flex: 1 1 5%;
-  }
-  .portfolio-titles a {
-    margin: 0 auto 0.5rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .projects {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .project {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 45%;
-            flex: 1 1 45%;
-    max-width: 48%;
-    min-height: 600px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .project:nth-child(even) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .project a {
-    margin: 2rem auto 1rem;
-  }
-  .thumbnail {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
-  }
-  .keywords {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-}
-
-@media (max-width: 648px) {
-  .projects-box {
-    margin-top: 1rem;
-    padding: 0;
-  }
-  .projects {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .project {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 415px) {
-  .project-info {
-    padding-top: 0;
-  }
-}
-
 .about-page {
   padding: 5%;
   -webkit-box-orient: horizontal;
@@ -778,42 +648,6 @@ main {
 .photo img {
   -webkit-filter: saturate(0.8) grayscale(0.1);
           filter: saturate(0.8) grayscale(0.1);
-}
-
-@media (max-width: 768px) {
-  .about-page {
-    display: block;
-    padding: 5% 0 0;
-  }
-  .photo {
-    margin: 0 auto;
-    width: 40vw;
-    height: 40vw;
-    min-width: 200px;
-    min-height: 200px;
-  }
-  .about-title {
-    text-align: center;
-  }
-  .about-me {
-    width: 100%;
-  }
-  .about-me a {
-    display: inline-block;
-  }
-  .about-me p {
-    padding: 0 5%;
-  }
-  .about-me p:last-child {
-    text-align: center;
-  }
-  .about-me-info {
-    overflow: auto;
-    height: calc(100vh - 300px);
-  }
-  .about-me-info a {
-    margin: 0.5rem auto;
-  }
 }
 
 .contact-page {
@@ -925,6 +759,35 @@ textarea {
   height: 32px;
 }
 
+@media (max-width: 1240px) {
+  .portfolio-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: url("../assets/crane.svg") fixed center no-repeat;
+    background-size: 60%;
+  }
+  .portfolio-title {
+    margin: 1rem auto 0;
+    text-align: center;
+  }
+  .portfolio-title::after {
+    display: none;
+  }
+  .portfolio-titles {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 5%;
+            flex: 1 1 5%;
+  }
+  .portfolio-titles a {
+    margin: 0 auto 0.5rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .contact-page {
     background-size: 70%;
@@ -932,6 +795,94 @@ textarea {
   .contact {
     width: 80%;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .project {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 45%;
+            flex: 1 1 45%;
+    max-width: 48%;
+    min-height: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project a {
+    margin: 2rem auto 1rem;
+  }
+  .thumbnail {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+  .keywords {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 812px) {
+  .greeting-box {
+    width: 80%;
+  }
+  .hello-info {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    display: block;
+    padding: 5% 0 0;
+  }
+  .photo {
+    margin: 0 auto;
+    width: 40vw;
+    height: 40vw;
+    min-width: 200px;
+    min-height: 200px;
+  }
+  .about-title {
+    text-align: center;
+  }
+  .about-me {
+    width: 100%;
+  }
+  .about-me a {
+    display: inline-block;
+  }
+  .about-me p {
+    padding: 0 5%;
+  }
+  .about-me p:last-child {
+    text-align: center;
+  }
+  .about-me-info {
+    overflow: auto;
+    height: calc(100vh - 300px);
+  }
+  .about-me-info a {
+    margin: 0.5rem auto;
   }
 }
 
@@ -944,7 +895,24 @@ textarea {
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 648px) {
+  .projects-box {
+    margin-top: 1rem;
+    padding: 0;
+  }
+  .projects {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .project {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 550px) {
   input[type='text'],
   input[type='email'] {
     -ms-flex-preferred-size: 100%;
@@ -961,5 +929,31 @@ textarea {
   .contact-page,
   .contact {
     background: none;
+  }
+  .greeting-box {
+    width: 100%;
+  }
+  .hello-info {
+    width: 90%;
+  }
+  .landing-page {
+    background-size: 82.5%;
+    background-position-y: 98%;
+  }
+}
+
+@media (max-width: 415px) {
+  .menu-button {
+    top: 10px;
+    left: 10px;
+  }
+  .project-info {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 370px) {
+  .hello-info {
+    width: 95%;
   }
 }
