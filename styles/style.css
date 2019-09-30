@@ -759,7 +759,7 @@ textarea {
   height: 32px;
 }
 
-@media (max-width: 1240px) {
+@media screen and (max-width: 1240px) {
   .portfolio-page {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -788,7 +788,7 @@ textarea {
   }
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .contact-page {
     background-size: 70%;
   }
@@ -798,7 +798,7 @@ textarea {
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .projects {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -841,7 +841,7 @@ textarea {
   }
 }
 
-@media (max-width: 812px) {
+@media screen and (max-width: 812px) {
   .greeting-box {
     width: 80%;
   }
@@ -850,7 +850,7 @@ textarea {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .about-page {
     display: block;
     padding: 5% 0 0;
@@ -886,7 +886,7 @@ textarea {
   }
 }
 
-@media (max-width: 680px) {
+@media screen and (max-width: 680px) {
   .contact-page {
     background-size: 100%;
   }
@@ -895,7 +895,7 @@ textarea {
   }
 }
 
-@media (max-width: 648px) {
+@media screen and (max-width: 648px) {
   .projects-box {
     margin-top: 1rem;
     padding: 0;
@@ -912,7 +912,7 @@ textarea {
   }
 }
 
-@media (max-width: 550px) {
+@media screen and (max-width: 550px) {
   input[type='text'],
   input[type='email'] {
     -ms-flex-preferred-size: 100%;
@@ -942,7 +942,7 @@ textarea {
   }
 }
 
-@media (max-width: 415px) {
+@media screen and (max-width: 415px) {
   .menu-button {
     top: 10px;
     left: 10px;
@@ -952,7 +952,7 @@ textarea {
   }
 }
 
-@media (max-width: 370px) {
+@media screen and (max-width: 370px) {
   .hello-info {
     width: 95%;
   }
