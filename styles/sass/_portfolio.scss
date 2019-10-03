@@ -42,7 +42,7 @@
 
 .project {
 	background: $c-color;
-	margin-bottom: 20vh;
+	margin-bottom: 15vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -53,6 +53,11 @@
 .project-info,
 .thumbnail {
 	flex: 1 1 46%;
+}
+
+.thumbnail:hover img,
+.thumbnail a:focus img {
+	filter: drop-shadow(0px 0px 5px $black);
 }
 
 .project-info {
