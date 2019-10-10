@@ -35,7 +35,7 @@ $(function() {
 	$('#main').smoothState({ blacklist: '.no-smoothState' });
 	//document ready
 
-	$(document).keydown(function(e) {
+	$(document).keyup(function(e) {
 		switch (e.key) {
 			case 'ArrowLeft':
 				window.location.pathname = page.prevPage;
