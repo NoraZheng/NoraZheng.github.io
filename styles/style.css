@@ -277,13 +277,15 @@ main {
 .next-page,
 .repo,
 .live-link {
+  display: inline-block;
   text-transform: uppercase;
   margin-top: 1rem;
-  padding: 5px 0;
-  border: 2px solid transparent;
-  border-bottom-color: #191919;
+  padding: 0.5rem;
+  border: 2px solid #191919;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  letter-spacing: 1px;
+  resize: none;
 }
 
 .next-page:focus, .next-page:hover,
@@ -292,7 +294,8 @@ main {
 .live-link:focus,
 .live-link:hover {
   color: #f82749;
-  border-bottom: 2px dashed #f82749;
+  border: 2px dashed #f82749;
+  outline: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -608,7 +611,7 @@ main {
 }
 
 .about-page {
-  padding: 5%;
+  padding: 5% 10%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -627,12 +630,8 @@ main {
           flex: 1 1 60%;
 }
 
-.about-me a {
-  margin-right: 2rem;
-}
-
-.underline {
-  border-bottom: 2px solid #191919;
+.about-me-info {
+  width: 90%;
 }
 
 .about-title {
@@ -720,6 +719,8 @@ textarea:focus,
 .send-button:focus {
   border: 2px dashed #f82749;
   color: #f82749;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 textarea {
@@ -860,6 +861,9 @@ textarea {
   .about-page {
     display: block;
     padding: 5% 0 0;
+  }
+  .about-me-info {
+    width: 100%;
   }
   .photo {
     margin: 0 auto;
