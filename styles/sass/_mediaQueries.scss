@@ -77,16 +77,13 @@
   }
   .photo {
     margin: 0 auto;
-    width: 40vw;
-    height: 40vw;
-    min-width: 200px;
-    min-height: 200px;
+    max-width: 300px;
+    max-height: 240px;
   }
   .about-title {
     text-align: center;
   }
   .about-me {
-    width: 100%;
     a {
       display: inline-block;
     }

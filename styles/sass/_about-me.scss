@@ -5,30 +5,6 @@
   align-items: center;
 }
 
-.about-me {
-  flex: 1 1 60%;
-}
-
-.about-me-info {
-  width: 90%;
-}
-
 .about-title {
   margin: 0;
-}
-.photo {
-  flex: 1 1 40%;
-  max-width: 450px;
-  background: url('../assets/cloud.svg'),
-    radial-gradient(
-      rgba(lighten($s-color, 10%), 0.2),
-      rgba(lighten($s-color, 10%), 0.2)
-    );
-  background-size: 170%;
-  border: 5px solid $s-color;
-  border-radius: 50%;
-  overflow: hidden;
-  img {
-    filter: saturate(0.8) grayscale(0.1);
-  }
 }
