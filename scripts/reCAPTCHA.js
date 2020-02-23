@@ -1,3 +1,3 @@
 function onSubmit() {
-  $('#contact-form').submit();
+  document.getElementById('contact-form').submit();
 }
