@@ -31,6 +31,11 @@ page.toggleMenu = () => {
   $('main').toggleClass('hide-main');
 };
 
+page.onSubmit = () => {
+  console.log('hello');
+  $('#contact-form').submit();
+};
+
 $(function() {
   $('#main').smoothState({ blacklist: '.no-smoothState' });
   //document ready
