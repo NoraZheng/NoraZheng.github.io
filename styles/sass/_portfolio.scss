@@ -1,91 +1,91 @@
 .portfolio-page {
-	flex-direction: row;
-	align-items: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .portfolio-titles {
-	flex: 1 1 20%;
-	padding-left: 2%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: center;
-	h1 {
-		flex: 1 1 100%;
-	}
+  flex: 1 1 20%;
+  padding-left: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  h1 {
+    flex: 1 1 100%;
+  }
 }
 
 .portfolio-title {
-	margin: 30vh 0 0;
-	&::after {
-		animation: fadeIn 0.4s both;
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		display: block;
-		content: '';
-		width: 32vmax;
-		height: 400px;
-		background: url('../assets/crane.svg') no-repeat left center;
-		background-size: contain;
-		z-index: -5;
-		transform: scaleX(-1);
-	}
+  margin: 30vh 0 0;
+  &::after {
+    animation: fadeIn 0.4s both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 32vmax;
+    height: 400px;
+    background: url("../assets/crane.svg") no-repeat left center;
+    background-size: contain;
+    z-index: -5;
+    transform: scaleX(-1);
+  }
 }
 
 .projects-box {
-	overflow: auto;
-	flex: 2 1 70%;
-	height: 100vh;
-	padding: 2%;
+  overflow: auto;
+  flex: 2 1 70%;
+  height: 100vh;
+  padding: 2%;
 }
 
 .project {
-	background: $c-color;
-	margin-bottom: 15vh;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	&:nth-child(even) {
-		flex-direction: row-reverse;
-	}
+  background: $c-color;
+  margin-bottom: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
 }
 .project-info,
 .thumbnail {
-	flex: 1 1 46%;
+  flex: 1 1 46%;
 }
 
 .thumbnail:hover img,
 .thumbnail a:focus img {
-	filter: drop-shadow(0px 0px 5px $black);
+  filter: drop-shadow(0px 0px 5px $black);
 }
 
 .project-info {
-	padding: 1rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	h2 {
-		text-transform: uppercase;
-		text-align: center;
-	}
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
 
 .keywords {
-	padding-left: 1rem;
-	list-style-type: disc;
-	list-style-position: inside;
-
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  padding-left: 1rem;
+  list-style-type: disc;
+  list-style-position: inside;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .keyword {
-	flex: 1 1 50%;
+  flex: 1 1 50%;
 }
 
 .live-link,
 .repo {
-	margin-right: 3rem;
+  margin-right: 3rem;
 }
